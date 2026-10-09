@@ -122,14 +122,14 @@
       <section class="primary">
         <div class="status"><span class="pulse" aria-hidden="true"></span><span data-i18n="status">计划维护进行中</span></div>
         <div class="kicker">SERVICE STATUS / MAINTENANCE</div>
-        <h1 id="title" data-i18n="title">网站正在维护</h1>
-        <p class="description" data-i18n="description">我们正在进行系统升级与例行维护，部分服务暂时不可用。管理员正在加紧处理，感谢您的理解与耐心等待。</p>
+        <h1 id="title" data-i18n="title">网站即将上线</h1>
+        <p class="description" data-i18n="description">正在进行上线前系统检查与例行维护，服务暂时不可用。请耐心等待。</p>
         <div class="progress" aria-hidden="true"></div>
         <div class="meta"><span>HTTP 503</span><span data-i18n="scope">服务暂时不可用</span><span data-i18n="monitoring">状态持续监测中</span></div>
 
         <div class="eta" id="etaPanel" hidden>
           <div class="eta-head">
-            <div><div class="eta-label" data-i18n="etaLabel">预计恢复时间</div><div class="eta-time" id="etaTime">—</div></div>
+            <div><div class="eta-label" data-i18n="etaLabel">预计上线时间</div><div class="eta-time" id="etaTime">—</div></div>
           </div>
           <div class="countdown" aria-live="polite">
             <div class="unit"><span class="value" id="days">00</span><small data-i18n="days">天</small></div>
@@ -141,7 +141,7 @@
       </section>
 
       <aside class="side" aria-label="Emergency contact">
-        <h2 class="side-title" data-i18n="contactTitle">紧急需求</h2>
+        <h2 class="side-title" data-i18n="contactTitle">特殊需求</h2>
         <p class="side-copy" data-i18n="contactCopy">如有无法等待维护完成的紧急事项，请联系管理员。</p>
         <div class="contact-list">
           <div class="contact">
@@ -151,11 +151,11 @@
           </div>
           <div class="contact">
             <div class="contact-icon" aria-hidden="true">DD</div>
-            <div><div class="contact-label">钉钉 DingTalk (无需通过，更快捷) </div><div class="contact-value" id="dingtalk">oliverfan0224</div></div>
+            <div><div class="contact-label">钉钉 DingTalk </div><div class="contact-value" id="dingtalk">oliverfan0224</div></div>
             <button class="copy" type="button" data-copy="dingtalk" data-i18n="copy">复制</button>
           </div>
         </div>
-        <div class="notice"><b data-i18n="noticeTitle">联系时请注明：</b><br><span data-i18n="noticeText">您的称呼、受影响的功能，需达成目的，便于我尽快判断与处理。</span></div>
+        <div class="notice"><b data-i18n="noticeTitle">联系时请注明：</b><br><span data-i18n="noticeText">您的称呼、受影响的功能，需达成目的，便于尽快判断与处理。</span></div>
         <div class="signature">PREPARED BY Faneillo<br>All rights reserved.</div>
       </aside>
     </article>
@@ -168,7 +168,7 @@
       administrator:'Oliver Fan',
       wechat:'OliverFan_0224',
       dingtalk:'oliverfan0224',
-      recovery:{enabled:false,target:''}
+      recovery:{enabled:true,target:'2026-10-110T12:00:00+08:00'}
     };
 
     const TEXT={
