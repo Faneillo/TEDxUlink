@@ -104,7 +104,7 @@
   <div class="toolbar" aria-label="Display settings">
     <button class="control eta-control" id="etaToggle" type="button" aria-pressed="false">ETA OFF</button>
     <select class="control" id="language" aria-label="Language">
-      <option value="auto">AUTO</option><option value="zh-CN">简中</option><option value="zh-TW">繁中</option><option value="en">EN</option>
+      <option value="auto">AUTO</option><option value="zh-CN">简中</option><option value="en">EN</option>
     </select>
     <button class="control theme-control" id="theme" type="button" aria-label="Color mode">THEME AUTO</button>
   </div>
@@ -168,23 +168,22 @@
       administrator:'Oliver Fan',
       wechat:'OliverFan_0224',
       dingtalk:'oliverfan0224',
-      recovery:{enabled:true,target:'2026-10-110T12:00:00+08:00'}
+      recovery:{enabled:true,target:'2026-10-11T12:00:00+08:00'}
     };
 
     const TEXT={
-      'zh-CN':{status:'计划维护进行中',title:'网站正在维护',description:'我们正在进行系统升级与例行维护，部分服务暂时不可用。管理员正在加紧处理，感谢您的理解与耐心等待。',scope:'服务暂时不可用',monitoring:'状态持续监测中',etaLabel:'预计恢复时间',days:'天',hours:'时',minutes:'分',seconds:'秒',contactTitle:'紧急需求',contactCopy:'如有无法等待维护完成的紧急事项，请联系管理员 Oliver Fan。',copy:'复制',copied:'已复制',copyFail:'无法复制',noticeTitle:'联系时请注明：',noticeText:'您的姓名、受影响的功能，以及事项紧急程度，便于管理员尽快判断与处理。',pending:'待管理员确认',reached:'预计恢复时间已到',etaOn:'ETA 开启',etaOff:'ETA 关闭',invalid:'恢复时间尚未设置'},
-      'zh-TW':{status:'計劃維護進行中',title:'網站正在維護',description:'我們正在進行系統升級與例行維護，部分服務暫時無法使用。技術團隊正在加緊處理，感謝您的理解與耐心等候。',scope:'服務暫時無法使用',monitoring:'狀態持續監測中',etaLabel:'預計恢復時間',days:'天',hours:'時',minutes:'分',seconds:'秒',contactTitle:'緊急需求',contactCopy:'如有無法等候維護完成的緊急事項，請聯絡管理員 Oliver Fan。',copy:'複製',copied:'已複製',copyFail:'無法複製',noticeTitle:'聯絡時請註明：',noticeText:'您的姓名、受影響的功能，以及事項緊急程度，以便管理員儘快判斷與處理。',pending:'待管理員確認',reached:'預計恢復時間已到',etaOn:'ETA 開啟',etaOff:'ETA 關閉',invalid:'恢復時間尚未設定'},
-      en:{status:'Scheduled maintenance in progress',title:'Website under maintenance',description:'We are performing scheduled maintenance and system upgrades. Some services are temporarily unavailable while our technical team completes the work. Thank you for your patience and understanding.',scope:'Service temporarily unavailable',monitoring:'Status actively monitored',etaLabel:'Estimated restoration',days:'Days',hours:'Hours',minutes:'Minutes',seconds:'Seconds',contactTitle:'Urgent assistance',contactCopy:'For urgent matters that cannot wait until maintenance is complete, please contact the administrator, Oliver Fan.',copy:'Copy',copied:'Copied',copyFail:'Unable to copy',noticeTitle:'Please include:',noticeText:'Your name, the affected function, and the urgency of the request so the administrator can assess it promptly.',pending:'Pending administrator confirmation',reached:'Estimated restoration time reached',etaOn:'ETA ON',etaOff:'ETA OFF',invalid:'Restoration time is not configured'}
+      'zh-CN':{status:'计划维护进行中',title:'网站即将上线',description:'正在进行上线前系统检查与例行维护，服务暂时不可用。请耐心等待。',scope:'服务暂时不可用',monitoring:'状态持续监测中',etaLabel:'预计上线时间',days:'天',hours:'时',minutes:'分',seconds:'秒',contactTitle:'特殊需求',contactCopy:'如有无法等待维护完成的紧急事项，请联系管理员。',copy:'复制',copied:'已复制',copyFail:'无法复制',noticeTitle:'联系时请注明：',noticeText:'您的称呼、受影响的功能，需达成目的，便于尽快判断与处理。',pending:'待管理员确认',reached:'预计上线时间已到',etaOn:'ETA 开启',etaOff:'ETA 关闭',invalid:'上线时间尚未设置'},
+      en:{status:'Pre-launch maintenance in progress',title:'Our website is launching soon',description:'We are carrying out final system checks and routine maintenance before launch. The site is temporarily unavailable. Thank you for your patience.',scope:'Service temporarily unavailable',monitoring:'Status is being monitored',etaLabel:'Estimated launch time',days:'Days',hours:'Hours',minutes:'Minutes',seconds:'Seconds',contactTitle:'Special requests',contactCopy:'For urgent matters that cannot wait until maintenance is complete, please contact the administrator.',copy:'Copy',copied:'Copied',copyFail:'Unable to copy',noticeTitle:'Please include:',noticeText:'Your name, the affected feature, and what you need help with, so we can assess and respond as quickly as possible.',pending:'Awaiting administrator confirmation',reached:'Estimated launch time reached',etaOn:'ETA ON',etaOff:'ETA OFF',invalid:'Launch time is not configured'}
     };
 
     const $=s=>document.querySelector(s);
     const state={lang:'zh-CN',themeMode:'auto',etaVisible:SITE_CONFIG.recovery.enabled,timer:null};
     const media=matchMedia('(prefers-color-scheme: dark)');
-    const supported=['zh-CN','zh-TW','en'];
+    const supported=['zh-CN','en'];
 
     function detectedLanguage(){
       const list=navigator.languages?.length?navigator.languages:[navigator.language||'en'];
-      for(const raw of list){const l=raw.toLowerCase();if(l.startsWith('zh-hant')||l.includes('tw')||l.includes('hk'))return'zh-TW';if(l.startsWith('zh'))return'zh-CN';if(l.startsWith('en'))return'en'}
+      for(const raw of list){const l=raw.toLowerCase();if(l.startsWith('zh'))return'zh-CN';if(l.startsWith('en'))return'en'}
       return'en';
     }
     function setLanguage(choice){
