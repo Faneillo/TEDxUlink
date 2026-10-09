@@ -89,7 +89,7 @@
     .copy:hover{color:var(--blue);border-color:var(--blue)}
     .notice{margin-top:18px;padding:14px 15px;border:1px solid var(--line);border-radius:12px;color:var(--dim);font-size:11px;line-height:1.65}
     .notice b{color:var(--text)}
-    .signature{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);color:var(--dim);font:700 9px var(--mono);letter-spacing:1.4px}
+    .signature{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);color:var(--dim);font:700 11px var(--mono);letter-spacing:1.4px}
     .noscript{position:fixed;inset:auto 20px 20px;z-index:100;padding:12px 15px;background:#fff3cd;color:#5f4300;border:1px solid #e8c96d;border-radius:10px;font-size:13px}
     .toast{position:fixed;z-index:50;left:50%;bottom:28px;transform:translate(-50%,20px);opacity:0;padding:10px 14px;border-radius:999px;background:var(--text);color:var(--bg);font:700 10px var(--mono);pointer-events:none;transition:.2s}
     .toast.show{opacity:1;transform:translate(-50%,0)}
@@ -120,12 +120,12 @@
         <div class="brand-site"><strong>TEDxUlink 2026</strong><span>OFFICIAL WEBSITE</span></div>
       </header>
       <section class="primary">
-        <div class="status"><span class="pulse" aria-hidden="true"></span><span data-i18n="status">计划维护进行中</span></div>
+        <div class="status"><span class="pulse" aria-hidden="true"></span><span data-i18n="status">检查维护中</span></div>
         <div class="kicker">SERVICE STATUS / MAINTENANCE</div>
         <h1 id="title" data-i18n="title">网站即将上线</h1>
-        <p class="description" data-i18n="description">正在进行上线前系统检查与例行维护，服务暂时不可用。请耐心等待。</p>
+        <p class="description" data-i18n="description">正在进行上线前系统检查与例行维护，服务暂时不可用。</p>
         <div class="progress" aria-hidden="true"></div>
-        <div class="meta"><span>HTTP 503</span><span data-i18n="scope">服务暂时不可用</span><span data-i18n="monitoring">状态持续监测中</span></div>
+        <div class="meta"><span>HTTP 503</span><span data-i18n="scope">暂时不可用</span><span data-i18n="monitoring">状态持续监测中</span></div>
 
         <div class="eta" id="etaPanel" hidden>
           <div class="eta-head">
@@ -141,12 +141,12 @@
       </section>
 
       <aside class="side" aria-label="Emergency contact">
-        <h2 class="side-title" data-i18n="contactTitle">特殊需求</h2>
-        <p class="side-copy" data-i18n="contactCopy">如有无法等待维护完成的紧急事项，请联系管理员。</p>
+        <h2 class="side-title" data-i18n="contactTitle">联系我们</h2>
+        <p class="side-copy" data-i18n="contactCopy">如有疑问，请联系管理员。</p>
         <div class="contact-list">
           <div class="contact">
-            <div class="contact-icon" aria-hidden="true">VX</div>
-            <div><div class="contact-label">微信 WeChat</div><div class="contact-value" id="wechat">OliverFan_0224</div></div>
+            <div class="contact-icon" aria-hidden="true">EM</div>
+            <div><div class="contact-label">邮箱 Email</div><div class="contact-value" id="wechat">yancheng.fan@ulink.cn</div></div>
             <button class="copy" type="button" data-copy="wechat" data-i18n="copy">复制</button>
           </div>
           <div class="contact">
@@ -166,14 +166,14 @@
   <script>
     const SITE_CONFIG={
       administrator:'Oliver Fan',
-      wechat:'OliverFan_0224',
+      wechat:'yancheng.fan@ulink.cn',
       dingtalk:'oliverfan0224',
       recovery:{enabled:true,target:'2026-10-11T12:00:00+08:00'}
     };
 
     const TEXT={
-      'zh-CN':{status:'计划维护进行中',title:'网站即将上线',description:'正在进行上线前系统检查与例行维护，服务暂时不可用。请耐心等待。',scope:'服务暂时不可用',monitoring:'状态持续监测中',etaLabel:'预计上线时间',days:'天',hours:'时',minutes:'分',seconds:'秒',contactTitle:'特殊需求',contactCopy:'如有无法等待维护完成的紧急事项，请联系管理员。',copy:'复制',copied:'已复制',copyFail:'无法复制',noticeTitle:'联系时请注明：',noticeText:'您的称呼、受影响的功能，需达成目的，便于尽快判断与处理。',pending:'待管理员确认',reached:'预计上线时间已到',etaOn:'ETA 开启',etaOff:'ETA 关闭',invalid:'上线时间尚未设置'},
-      en:{status:'Pre-launch maintenance in progress',title:'Our website is launching soon',description:'We are carrying out final system checks and routine maintenance before launch. The site is temporarily unavailable. Thank you for your patience.',scope:'Service temporarily unavailable',monitoring:'Status is being monitored',etaLabel:'Estimated launch time',days:'Days',hours:'Hours',minutes:'Minutes',seconds:'Seconds',contactTitle:'Special requests',contactCopy:'For urgent matters that cannot wait until maintenance is complete, please contact the administrator.',copy:'Copy',copied:'Copied',copyFail:'Unable to copy',noticeTitle:'Please include:',noticeText:'Your name, the affected feature, and what you need help with, so we can assess and respond as quickly as possible.',pending:'Awaiting administrator confirmation',reached:'Estimated launch time reached',etaOn:'ETA ON',etaOff:'ETA OFF',invalid:'Launch time is not configured'}
+      'zh-CN':{status:'检查维护进行中',title:'网站即将上线',description:'正在进行上线前系统检查与例行维护，服务暂时不可用。',scope:'服务暂时不可用',monitoring:'状态持续监测中',etaLabel:'预计上线时间',days:'天',hours:'时',minutes:'分',seconds:'秒',contactTitle:'联系我们',contactCopy:'如有疑问，请联系管理员。',copy:'复制',copied:'已复制',copyFail:'无法复制',noticeTitle:'Web URL：',noticeText:'tedx.faneillo.online',pending:'待管理员确认',reached:'预计上线时间已到',etaOn:'ETA 开启',etaOff:'ETA 关闭',invalid:'上线时间尚未设置'},
+      en:{status:'Pre-launch maintenance',title:'Coming soon',description:'We are carrying out final system checks and routine maintenance before launch.',scope:'Temporarily unavailable',monitoring:'Status is being monitored',etaLabel:'Estimated launch time',days:'Days',hours:'Hours',minutes:'Minutes',seconds:'Seconds',contactTitle:'Questions?',contactCopy:'For urgent matters that cannot wait until maintenance is complete, please contact the administrator.',copy:'Copy',copied:'Copied',copyFail:'Unable to copy',noticeTitle:'Web URL:',noticeText:'tedx.faneillo.online',pending:'Awaiting administrator confirmation',reached:'Estimated launch time reached',etaOn:'ETA ON',etaOff:'ETA OFF',invalid:'Launch time is not configured'}
     };
 
     const $=s=>document.querySelector(s);
