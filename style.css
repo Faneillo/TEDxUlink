@@ -7,3 +7,29 @@
 
 /* Organiser portraits and bilingual sample topics */
 .contact-card .person-avatar{display:block;width:76px;height:76px;flex:0 0 76px;object-fit:cover;border-radius:18px;border:1px solid #dededb;background:white}.contact-card>div{min-width:0}.topic-group .topic-en{display:block;font-size:16px;line-height:1.6;font-weight:550;color:var(--ink)}.topic-group .topic-zh{display:block;font-size:14px;line-height:1.75;color:#666;margin-top:8px}.topic-group li{padding:19px 0}@media(max-width:600px){.contact-card .person-avatar{width:56px;height:56px;flex-basis:56px;border-radius:14px}.contact-card{flex-wrap:wrap}.contact-card>div{flex:1 1 190px}}
+
+/* Audition status after speaker applications close */
+.status-pill{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid #676767;border-radius:999px;color:#f7f7f7;font-size:11px;font-weight:650;letter-spacing:.12em}
+.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px #e62b1e24}
+.audition .section-label{margin-bottom:30px}
+.audition h2{margin:24px 0 16px}
+.audition .recruit-top p{max-width:600px;margin:0}
+.result-date{align-self:flex-end;min-width:290px;padding:24px 0 8px;border-top:1px solid #555}
+.result-date .micro{color:#b5b5b5}
+.result-date strong{display:block;margin:10px 0 4px;color:#fff;font-size:clamp(58px,6vw,88px);line-height:1;font-weight:550;letter-spacing:-.07em}
+.result-date>span:last-child{font-size:13px;color:#aaa}
+.audition-timeline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:62px}
+.timeline-step{min-height:158px;padding:24px;border:1px solid #414141;border-radius:16px;display:flex;flex-direction:column;align-items:flex-start}
+.timeline-step.current{border-color:#e62b1e;background:linear-gradient(135deg,#2e201f,#242020)}
+.timeline-step>span{color:#f27168;font-size:11px;font-weight:650;letter-spacing:.12em}
+.timeline-step strong{display:block;margin-top:23px;font-size:19px;font-weight:600}
+.timeline-step small{display:block;margin-top:8px;color:#aaa;font-size:12px;line-height:1.5}
+.audition-note{border-top:1px solid #414141;margin:34px 0 0;padding-top:24px}
+.audition-link{display:inline-flex;align-items:center;gap:18px;margin-top:14px;padding:10px 0;color:#fff;font-size:14px;font-weight:600;border-bottom:1px solid #777}
+.audition-link span{color:#f27168}
+.speaker-status{max-width:760px;border-left:4px solid var(--red)}
+.speaker-status .status-pill-light{color:#383838;border-color:#dededb;background:#fafaf8}
+.speaker-status h2{margin:25px 0 18px}
+.speaker-status p strong{color:var(--ink);font-weight:650}
+@media(max-width:900px){.result-date{min-width:230px}.audition-timeline{margin-top:42px}}
+@media(max-width:600px){.audition .recruit-top{display:block}.result-date{margin-top:34px;min-width:0}.audition-timeline{grid-template-columns:1fr;gap:10px;margin-top:32px}.timeline-step{min-height:0;padding:19px}.timeline-step strong{margin-top:12px}.audition h2{font-size:42px}.speaker-status h2{font-size:28px}}
