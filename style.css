@@ -41,6 +41,7 @@
 .speaker-intro{position:relative;max-width:820px;padding:30px 34px 32px;margin:0 0 42px;background:#fff;border:1px solid #e5e5e1;border-left:4px solid var(--red);border-radius:18px;overflow:hidden}
 .speaker-intro:after{content:"x";position:absolute;right:24px;top:-55px;color:#e62b1e0b;font:900 245px/.9 Arial,sans-serif;transform:rotate(-10deg);pointer-events:none}
 .speaker-intro .status-pill{position:relative;z-index:1}
+.speaker-intro .status-pill-light{color:#383838;border-color:#dededb;background:#fafaf8}
 .speaker-intro h2{position:relative;z-index:1;margin:22px 0 12px;font-size:clamp(38px,5vw,62px);line-height:.98;letter-spacing:-.065em}
 .speaker-intro p{position:relative;z-index:1;max-width:580px;margin:0;color:#666;font-size:15px;line-height:1.8}
 .speaker-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
