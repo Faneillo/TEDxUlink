@@ -57,7 +57,6 @@
 .speaker-talk-label{margin-top:21px;color:var(--card-accent);font-size:9px;font-weight:700;letter-spacing:.18em}
 .speaker-talk{margin:7px 0 20px;max-width:430px;font-size:15px;line-height:1.55;font-weight:520;letter-spacing:-.015em}
 .speaker-card-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:13px;border-top:1px solid #e8e7e3;color:#888;font-size:9px;letter-spacing:.13em;text-transform:uppercase}
-.speaker-card-arrow{color:var(--red);font-size:14px}
 @media(max-width:900px){.speaker-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.speaker-page{padding:52px 6% 72px}.speaker-intro{padding:25px 22px;margin-bottom:30px}.speaker-intro:after{right:-15px;top:-20px;font-size:185px}.speaker-grid{grid-template-columns:1fr;gap:12px}.speaker-card{min-height:285px;padding:21px}.speaker-person{margin-top:29px}}
 
